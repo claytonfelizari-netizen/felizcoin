@@ -13,7 +13,7 @@
 </head>
 <body>
 <main>
-  <header><img src="felizcoin.jpeg" alt="Logo FELIZCOIN"><div><h1>FELIZCOIN</h1><span class="tag">FELIZ · Solana mainnet</span><p>Projeto comunitário em fase inicial. Sem promessa de retorno financeiro.</p></div><select class="language" id="language" aria-label="Idioma"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option></select></header>
+  <header><img src="felizcoin.jpeg" alt="FELIZCOIN logo"><div><h1>FELIZCOIN</h1><span class="tag">FELIZ · Solana mainnet</span><p>Early-stage community project. No promise of financial return.</p></div><select class="language" id="language" aria-label="Language"><option value="en" selected>English</option><option value="pt">Português</option><option value="es">Español</option></select></header>
   <div class="links"><a href="https://raydium.io/swap/?inputMint=sol&outputMint=6LTbeJQUvvHM4bXmVJFuvNxzUmL4pNQCnyoBqFDyQP89">Comprar FELIZ na Raydium</a><a class="secondary" href="https://explorer.solana.com/address/6LTbeJQUvvHM4bXmVJFuvNxzUmL4pNQCnyoBqFDyQP89">Ver no Explorer</a><a class="secondary" href="https://stakepoint.io/locks/cmw7ymrty0000kt08gewd0d92">Ver liquidez bloqueada</a><a class="secondary" href="https://stakepoint.io/vesting/cmw7zk35n0000js08fc0abwht">Ver vesting do fundador</a></div>
   <section class="grid">
     <article class="card"><div class="label">Supply fixo</div><div class="value">25.000.000 FELIZ</div></article>
@@ -24,7 +24,7 @@
   <section class="card" style="margin-top:14px"><h2>Distribuição</h2><ul><li>85%: reserva pública/ecossistema, a ser definida com transparência.</li><li>15%: fundador (3.750.000 FELIZ).</li><li>Até 10% da reserva do fundador pode ser vendida nos primeiros 12 meses.</li><li>Os 90% restantes da reserva do fundador têm cliff de 12 meses e liberação linear em 24 meses.</li></ul></section>
   <section class="card" style="margin-top:14px"><h2>Utilidade planejada</h2><ul><li>Benefícios e acesso a ações da comunidade FELIZCOIN.</li><li>Pagamentos e recompensas em produtos ou eventos do projeto.</li><li>Futuros produtos serão anunciados publicamente antes de qualquer mudança.</li><li>Utilidade não é promessa de valorização nem garantia de retorno.</li></ul></section>
   <section class="card" style="margin-top:14px"><h2>Kit Digital FELIZCOIN</h2><p>Materiais oficiais gratuitos para apoiadores e para divulgação responsável do projeto.</p><div class="links" style="margin:14px 0 0"><a href="certificado-apoiador.html" download>Abrir certificado</a><a class="secondary" href="felizcoin-arte-oficial.jpeg" download="felizcoin-arte-oficial.jpeg">Baixar arte oficial</a><a class="secondary" href="felizcoin-wallpaper.jpeg" download="felizcoin-wallpaper.jpeg">Baixar wallpaper</a></div><p class="label">O kit é gratuito. Nenhum pagamento é necessário.</p></section>
-  <section class="card quiz" style="margin-top:14px" id="quiz"><div class="quiz-heading"><div><span class="tag">NOVO · DESAFIO FELIZ</span><h2>Quiz FELIZCOIN</h2><p>Uma fase tem 5 perguntas. Responda rápido, sem tempo para pesquisar.</p></div><div class="quiz-stats"><span id="attemptsText">3 tentativas grátis</span><span id="coinText">0 FELIZ</span></div></div><div class="quiz-progress"><span id="progressBar"></span></div><div id="quizBody"><div class="quiz-start"><p>Você terá <strong>20 segundos</strong> por pergunta. Cada erro ou tempo esgotado encerra a fase.</p><button class="quiz-btn" id="startQuiz">Começar fase</button></div></div></section>
+  <section class="card quiz" style="margin-top:14px" id="quiz"><div class="quiz-heading"><div><span class="tag">NEW · FELIZ CHALLENGE</span><h2>FELIZCOIN Quiz</h2><p>Each phase has 5 questions. Answer quickly, with no time to search online.</p></div><div class="quiz-stats"><span id="attemptsText">3 free attempts</span><span id="coinText">0 FELIZ</span></div></div><div class="quiz-progress"><span id="progressBar"></span></div><div id="quizBody"><div class="quiz-start"><p>You have <strong>20 seconds</strong> per question. An incorrect answer or timeout ends the phase.</p><button class="quiz-btn" id="startQuiz">Start phase</button></div></div></section>
   <section class="card" style="margin-top:14px"><h2>Riscos</h2><p>A liquidez é pequena e o preço pode variar muito. O token não está listado na Binance Exchange, não tem garantia de valorização e pode perder todo o valor. Verifique sempre o mint acima antes de negociar.</p></section>
   <footer>FELIZCOIN é um projeto experimental. Esta página é informativa e não é recomendação de investimento.</footer>
   </main>
@@ -38,11 +38,11 @@ document.querySelector('#language').addEventListener('change',e=>{const dict=tra
 </script>
 <script>
 const quizQuestions=[
- {q:'Em qual blockchain o FELIZCOIN está?',a:['Ethereum','Solana','Polygon','Bitcoin'],c:1},
- {q:'Qual é o supply fixo informado para o FELIZCOIN?',a:['2.500.000','25.000.000','250.000.000','1.000.000'],c:1},
- {q:'Qual é o símbolo do token?',a:['FELIZ','FZC','HAPPY','SOL'],c:0},
- {q:'Qual plataforma aparece como pool de negociação?',a:['Uniswap','Raydium','PancakeSwap','Jupiter'],c:1},
- {q:'O projeto promete valorização financeira?',a:['Sim, garantida','Somente para membros','Não','Apenas no primeiro ano'],c:2}
+ {q:'Which blockchain is FELIZCOIN on?',a:['Ethereum','Solana','Polygon','Bitcoin'],c:1},
+ {q:'What fixed supply is listed for FELIZCOIN?',a:['2,500,000','25,000,000','250,000,000','1,000,000'],c:1},
+ {q:'What is the token symbol?',a:['FELIZ','FZC','HAPPY','SOL'],c:0},
+ {q:'Which platform is listed as the trading pool?',a:['Uniswap','Raydium','PancakeSwap','Jupiter'],c:1},
+ {q:'Does the project promise financial appreciation?',a:['Yes, guaranteed','Only for members','No','Only in the first year'],c:2}
 ];
 const generalQuestions=[
  {q:'Qual é a capital da França?',a:['Madrid','Paris','Roma','Berlim'],c:1},
