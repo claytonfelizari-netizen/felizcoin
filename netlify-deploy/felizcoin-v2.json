@@ -1,0 +1,13 @@
+{
+  "name": "FELIZCOIN",
+  "symbol": "FELIZ",
+  "description": "FELIZCOIN — token na Solana mainnet.",
+  "image": "https://delicate-kringle-99b7e9.netlify.app/felizcoin-v2.jpeg",
+  "seller_fee_basis_points": 0,
+  "external_url": "https://delicate-kringle-99b7e9.netlify.app/",
+  "attributes": [
+    {"trait_type": "Network", "value": "Solana Mainnet"},
+    {"trait_type": "Supply", "value": "25000000"},
+    {"trait_type": "Decimals", "value": "9"}
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "status": "devnet_verified",
+  "network": "devnet",
+  "spent_gbp": 0,
+  "name_local": "FELIZCOIN",
+  "metadata_published": true,
+  "mint": "JDHwqnG8gGd5J85Ze9AHxNvs1UBa7SbaNq1hjhfbCeaJ",
+  "payer": "GpJLewFqiyKS65fPKyQRvdHzac9T6o6iSHs3TGxzN9eL",
+  "founder_wallet": "HKaKcZzgAXravfvvBJ2vqKTvYBGWkrf8FJ5hwXqcvW9S",
+  "unallocated_wallet": "FuS9KkWYDmWDLkRaqzGHPSrc4HjfJWbdoU7EdG5z8TuB",
+  "supply_tokens": "21000000",
+  "founder_tokens": "5250000",
+  "unallocated_tokens": "15750000",
+  "founder_lockup": null,
+  "signatures": {
+    "creation": {
+      "signature": "3UPxsDDGxy7j4No9S6nSA1yjdpmwHjhH6yFbuKC3x5AM5jSQJmH6RP7hZF3cZrqx6949YELx8YjnLArLqS3JghSM",
+      "status": "confirmed",
+      "blockhash": "7tz2cvEfnvCaw65KVbYjT5kQQPHoBw6L6vj2P139p7e1",
+      "lastValidBlockHeight": 506900158
+    },
+    "transfer_round_trip": {
+      "signature": "5Fitk2VjxMKDAqquN5CJ9XFTRahtmjebYcHiHPme3ZgjRY1A2BW7VFAPUUb44YjnAcUzNxWkZv8LgGMsyUq4gtXB",
+      "status": "confirmed",
+      "blockhash": "WivXumxsNRJreQ7gzUCKnY9qXDG7Be5icuho2daZL7G",
+      "lastValidBlockHeight": 506900169
+    }
+  },
+  "notes": [
+    "Somente teste; sem valor real.",
+    "Os 75% restantes estão separados, sem destinação decidida.",
+    "Carteiras exclusivas de teste; não usar com fundos reais.",
+    "Nome e símbolo registrados; URI de imagem e descrição ainda em branco. Metadados editáveis."
+  ],
+  "updated_at": "2026-11-07T18:35:10.417Z",
+  "funding_blockers": [
+    {
+      "provider": "faucet.solana.com",
+      "observed": "GitHub account has too few public repos"
+    },
+    {
+      "provider": "faucet.quicknode.com/solana/devnet",
+      "observed": "Insufficient SOL balance; small mainnet balance required by request form"
+    },
+    {
+      "provider": "solfaucet.com",
+      "observed": "RPC error 429: airdrop limit reached or faucet has run dry"
+    }
+  ],
+  "metadata": {
+    "name": "FELIZCOIN",
+    "symbol": "FELIZ",
+    "uri": "",
+    "address": "4akiBCLdozof1vYwGn4mDmyXQ5a659eUKssAq7p1DQrG",
+    "mutable": true,
+    "update_authority": "GpJLewFqiyKS65fPKyQRvdHzac9T6o6iSHs3TGxzN9eL"
+  },
+  "checks": {
+    "supply": {
+      "passed": true
+    },
+    "distribution": {
+      "passed": true
+    },
+    "no_mint_authority": {
+      "passed": true
+    },
+    "no_freeze_authority": {
+      "passed": true
+    },
+    "metadata": {
+      "passed": true
+    },
+    "transfer_round_trip": {
+      "passed": true,
+      "method": "confirmed_transaction",
+      "tokens": "100"
+    },
+    "extra_mint_rejected": {
+      "passed": true,
+      "method": "on_chain_simulation",
+      "error": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 5
+          }
+        ]
+      }
+    },
+    "insufficient_funds_rejected": {
+      "passed": true,
+      "method": "on_chain_simulation",
+      "error": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 1
+          }
+        ]
+      }
+    },
+    "wrong_owner_rejected": {
+      "passed": true,
+      "method": "on_chain_simulation",
+      "error": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 4
+          }
+        ]
+      }
+    }
+  },
+  "explorer": "https://explorer.solana.com/address/JDHwqnG8gGd5J85Ze9AHxNvs1UBa7SbaNq1hjhfbCeaJ?cluster=devnet"
+}

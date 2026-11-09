@@ -1,0 +1,20 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>FELIZCOIN — atualizar arte</title>
+<style>body{font:16px system-ui;max-width:760px;margin:40px auto;padding:0 20px;background:#111;color:#eee}button{padding:12px 18px;border:0;border-radius:8px;background:#9b87f5;color:#111;font-weight:700;margin-right:8px}code{word-break:break-all}li{margin:10px 0}</style>
+<h1>FELIZCOIN (FELIZ)</h1>
+<p>Atualização do endereço do metadata para forçar o Explorer a recarregar a arte.</p>
+<ul>
+  <li>Mint: <code>6LTbeJQUvvHM4bXmVJFuvNxzUmL4pNQCnyoBqFDyQP89</code></li>
+  <li>Endereço atual: <code>https://delicate-kringle-99b7e9.netlify.app/felizcoin.json</code></li>
+  <li>Novo endereço: <code>https://felizcoin.netlify.app/felizcoin.json</code></li>
+</ul>
+<button id="connect">Conectar Phantom</button>
+<button id="update" disabled>Atualizar metadata</button>
+<p id="status">A atualização só será enviada depois da sua aprovação no Phantom.</p>
+<script src="https://unpkg.com/@solana/web3.js@1.98.4/lib/index.iife.min.js"></script>
+<script>
+const status=document.querySelector('#status'); let payer;
+document.querySelector('#connect').onclick=async()=>{try{if(!window.solana?.isPhantom)throw Error('Phantom não encontrada');const r=await window.solana.connect();payer=r.publicKey;document.querySelector('#update').disabled=false;status.textContent='Phantom conectada: '+payer.toBase58()+'.';}catch(e){status.textContent='Erro: '+e.message}};
+document.querySelector('#update').onclick=async()=>{try{status.textContent='Preparando atualização...';const x=await fetch('/build',{headers:{'x-payer':payer.toBase58()}}).then(r=>r.json());if(x.error)throw Error(x.error);const raw=Uint8Array.from(atob(x.transaction),c=>c.charCodeAt(0));const signed=await window.solana.signTransaction(solanaWeb3.Transaction.from(raw));const out=await fetch('/send',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({raw:btoa(String.fromCharCode(...signed.serialize()))})}).then(r=>r.json());if(out.error)throw Error(out.error);status.textContent='Atualização enviada: '+out.signature;}catch(e){status.textContent='Erro: '+(e?.message||e)}};
+</script>

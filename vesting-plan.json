@@ -1,0 +1,13 @@
+{
+  "network": "solana-mainnet-beta",
+  "token": "FELIZ",
+  "total_supply": 25000000,
+  "founder_allocation": 3750000,
+  "immediately_available": 375000,
+  "locked_amount": 3375000,
+  "cliff_months": 12,
+  "linear_release_months": 24,
+  "monthly_release": 140625,
+  "status": "design_only",
+  "note": "Não é um bloqueio on-chain. Requer programa ou serviço de vesting auditado antes da mainnet."
+}

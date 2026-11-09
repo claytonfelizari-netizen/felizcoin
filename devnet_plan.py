@@ -1,0 +1,37 @@
+"""Mostra o procedimento atual. Não acessa carteiras nem envia transações."""
+import json
+from pathlib import Path
+
+
+def render(config):
+    if config["test_network_proposal"] != "solana-devnet":
+        raise ValueError("Este roteiro aceita apenas Solana devnet.")
+    return """FELIZCOIN — PROCEDIMENTO DE TESTE
+
+O roteiro antigo de comandos individuais foi substituído pelo script JavaScript.
+Ele cria o mint, emite 21 milhões, separa 25% e 75%, registra nome e símbolo e
+revoga a autoridade de emissão em uma única transação.
+
+Com Node.js e pnpm:
+  pnpm install --frozen-lockfile --ignore-scripts
+  pnpm test
+  pnpm fetch-program
+  pnpm local
+  pnpm status
+  pnpm devnet
+
+fetch-program apenas baixa o programa público Metaplex para o teste local.
+local executa os programas reais em LiteSVM; não publica na blockchain pública.
+status apenas consulta devnet.
+devnet exige saldo fictício e nunca usa mainnet.
+
+Chaves de teste ficam em .devnet/ e .localnet/, excluídas do Git.
+Não usar essas carteiras com dinheiro real.
+Imagem e descrição públicas ainda não foram hospedadas; a URI está vazia.
+Leia README.md e devnet-result.json para o estado atual e os bloqueios.
+"""
+
+
+if __name__ == "__main__":
+    config = json.loads(Path(__file__).with_name("felizcoin.config.json").read_text())
+    print(render(config), end="")

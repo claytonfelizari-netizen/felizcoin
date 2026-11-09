@@ -1,0 +1,13 @@
+{
+  "name": "FELIZCOIN",
+  "symbol": "FELIZ",
+  "description": "FELIZCOIN (FELIZ), token comunitário na Solana mainnet. Verifique sempre o mint oficial antes de interagir.",
+  "image": "https://felizcoin.netlify.app/felizcoin.jpeg",
+  "seller_fee_basis_points": 0,
+  "external_url": "https://felizcoin.netlify.app/",
+  "attributes": [
+    {"trait_type": "Network", "value": "Solana Mainnet"},
+    {"trait_type": "Supply", "value": "25000000"},
+    {"trait_type": "Decimals", "value": "9"}
+  ]
+}

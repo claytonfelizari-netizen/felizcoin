@@ -1,0 +1,58 @@
+{
+  "status": "draft_not_approved_for_execution",
+  "purpose": "Preparação interna; não é oferta pública, promessa de valorização ou instrução de pagamento.",
+  "currency": "GBP",
+  "total_budget_limit": 500,
+  "spent": 0,
+  "funding_source": "Conta bancária do usuário no Reino Unido; sem acesso ou transferência",
+  "accepted_token_rules": {
+    "name": "FELIZCOIN",
+    "maximum_supply": "25000000",
+    "founder_tokens": "3750000",
+    "founder_percent": 15,
+    "founder_lockup": "max_10_percent_reserve_first_12_months_then_90_percent_linear_24_months"
+  },
+  "distribution_proposal_not_approved": {
+    "founder": "3750000",
+    "initial_liquidity_pool": "21250000",
+    "other_allocations": "0",
+    "note": "Proposta: 15% para o fundador (3.750.000); venda máxima de 375.000 no primeiro ano e 3.375.000 restantes bloqueados, com liberação linear em 24 meses. Não executada."
+  },
+  "budget_envelopes_not_quotes": {
+    "technical_setup_and_fees": 50,
+    "liquidity_capital_at_risk": 300,
+    "uncommitted_reserve": 150,
+    "note": "Divisão ilustrativa do teto, não cotação nem aprovação de gasto. Revisão jurídica, eventual aprovação de promoção e segurança ainda sem orçamento. Se os custos necessários não couberem, não lançar."
+  },
+  "technical_candidate": {
+    "network": "Solana mainnet, somente proposta",
+    "token_standard": "SPL Token",
+    "market": "Raydium CPMM, somente candidato técnico; disponibilidade e adequação UK não verificadas",
+    "published_pool_creation_fee_sol": "0.15",
+    "fee_excludes": ["depósitos para contas", "taxas de transação", "compra e transferência de SOL", "liquidez", "metadados", "custos jurídicos e revisão de segurança"],
+    "sol_gbp_quote": null,
+    "source": "https://docs.raydium.io/raydium/protocol/protocol-fees"
+  },
+  "uk_review": {
+    "applicable_route": null,
+    "legal_quote_gbp": null,
+    "promotion_approval_quote_gbp": null,
+    "finding": "A FCA descreve quatro vias para comunicar promoções de criptoativos a consumidores UK. Nenhuma está validada para FELIZCOIN. Avaliar separadamente se a atividade de emissão/venda exige registro ou outra permissão. Criar token não equivale a estar autorizado a promovê-lo.",
+    "sources": [
+      "https://www.fca.org.uk/firms/cryptoassets/marketing-uk-consumers",
+      "https://www.fca.org.uk/firms/cryptoassets/who-needs-register"
+    ]
+  },
+  "execution_gates": {
+    "user_controlled_production_wallet": false,
+    "distribution_and_lp_policy_agreed": false,
+    "metadata_prepared_before_mint_authority_revocation": true,
+    "public_network_test_completed": false,
+    "technical_review_completed": false,
+    "uk_offering_and_promotion_route_validated": false,
+    "all_required_costs_quoted_within_500_gbp": false,
+    "specific_spend_approved": false
+  },
+  "next_technical_change": "Concluir a verificação pública na devnet quando houver saldo fictício. Nome e símbolo já testados localmente com Metaplex; URI pública, imagem, carteira de produção e política definitiva de metadados ainda pendentes.",
+  "checked_on": "2026-10-11"
+}

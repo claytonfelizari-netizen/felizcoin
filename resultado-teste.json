@@ -1,0 +1,29 @@
+{
+  "status": "simulacao_local_concluida_nao_publicado",
+  "spent_gbp": 0,
+  "on_chain_transactions": 0,
+  "supply_tokens": "21000000",
+  "founder_tokens": "5250000",
+  "unallocated_tokens": "15750000",
+  "checks_passed": [
+    "Reserva inicial de 5.250.000",
+    "15.750.000 com destinação ainda pendente",
+    "Transferência fictícia de 100 unidades",
+    "Transferência da menor fração",
+    "Autotransferência conserva saldo",
+    "Saldo insuficiente rejeitado sem alterar saldos",
+    "Quantidade inválida rejeitada: 0",
+    "Quantidade inválida rejeitada: -1",
+    "Quantidade inválida rejeitada: 1.5",
+    "Quantidade inválida rejeitada: True",
+    "Conta sem saldo não transfere",
+    "Emissão extra rejeitada no modelo",
+    "Oferta total conservada"
+  ],
+  "limitations": [
+    "Modelo didático sem assinaturas, persistência de saldos ou conexão de rede.",
+    "Os testes validam somente este modelo Python, não o programa Solana.",
+    "Não foram criados token, carteira, preço, liquidez ou bloqueio de reserva na blockchain.",
+    "Nenhuma distribuição dos 75% restantes foi decidida."
+  ]
+}

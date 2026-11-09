@@ -1,0 +1,24 @@
+{
+  "name": "felizcoin-devnet",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "devnet": "node scripts/devnet.mjs",
+    "status": "node scripts/status.mjs",
+    "local": "node scripts/local.mjs",
+    "fetch-program": "node scripts/fetch-metadata-program.mjs"
+  },
+  "dependencies": {
+    "@metaplex-foundation/mpl-token-metadata": "3.4.0",
+    "@metaplex-foundation/umi": "1.6.0",
+    "@metaplex-foundation/umi-bundle-defaults": "1.6.0",
+    "@metaplex-foundation/umi-web3js-adapters": "1.6.0",
+    "@solana/spl-token": "0.4.14",
+    "@solana/web3.js": "1.99.0"
+  },
+  "devDependencies": {
+    "litesvm": "1.6.0"
+  }
+}

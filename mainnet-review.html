@@ -1,0 +1,24 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>FELIZCOIN — revisão mainnet</title>
+<style>body{font:16px system-ui;max-width:680px;margin:40px auto;padding:0 20px;background:#111;color:#eee}button{padding:12px 18px;border:0;border-radius:8px;background:#9b87f5;color:#111;font-weight:700}code{word-break:break-all}</style>
+<h1>FELIZCOIN (FELIZ)</h1>
+<p>Revisão antes da criação na Solana mainnet.</p>
+<ul>
+  <li>Oferta: 25.000.000 FELIZ</li>
+  <li>Reserva do fundador: 3.750.000 FELIZ (15%)</li>
+  <li>Venda inicial máxima: 375.000 FELIZ (10% da reserva)</li>
+  <li>Restante em vesting: 3.375.000 FELIZ</li>
+  <li>Carteira: <code>AbwNG64isqgUggWo99qivQPhFnCymVNkRjYFCEZewXa4</code></li>
+</ul>
+<button id="connect">Conectar Phantom</button>
+<button id="build" disabled>Preparar transação</button>
+<p id="status">Nenhuma transação foi enviada.</p>
+<script src="https://unpkg.com/@solana/web3.js@1.98.4/lib/index.iife.min.js"></script><script>
+const status=document.querySelector('#status');
+document.querySelector('#connect').onclick=async()=>{
+  if(!window.solana?.isPhantom){status.textContent='Abra este arquivo no Chrome com a extensão Phantom instalada.';return}
+  const r=await window.solana.connect(); window.payer=r.publicKey; document.querySelector('#build').disabled=false; status.textContent='Phantom conectada: '+r.publicKey.toBase58()+'.';
+};
+document.querySelector('#build').onclick=async()=>{try{status.textContent='Preparando transação...'; const x=await fetch('/build',{headers:{'x-payer':window.payer.toBase58()}}).then(r=>r.json()); if(x.error) throw Error(x.error); const raw=Uint8Array.from(atob(x.transaction),c=>c.charCodeAt(0)); const signed=await window.solana.signTransaction(solanaWeb3.Transaction.from(raw)); const out=await fetch('/send',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({raw:btoa(String.fromCharCode(...signed.serialize()))})}).then(r=>r.json()); if(out.error) throw Error(out.error); status.textContent='Transação enviada: '+out.signature;}catch(e){status.textContent='Erro: '+(e?.message||e)}};
+</script>

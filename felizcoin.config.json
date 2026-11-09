@@ -1,0 +1,60 @@
+{
+  "name": "FELIZCOIN",
+  "symbol_proposal": "FELIZ",
+  "status": "mainnet_pool_created",
+  "local_execution_status": "local_svm_verified",
+  "local_execution_report": "local-svm-result.json",
+  "metadata_test_status": "name_and_symbol_verified_on_devnet",
+  "metadata_uri": "https://delicate-kringle-99b7e9.netlify.app/felizcoin.json",
+  "metadata_mutable_in_test": true,
+  "test_network_proposal": "solana-devnet",
+  "test_supply": "21000000",
+  "test_decimals": 9,
+  "production_supply": "25000000",
+  "production_network": "solana-mainnet-beta",
+  "production_mint_address": "6LTbeJQUvvHM4bXmVJFuvNxzUmL4pNQCnyoBqFDyQP89",
+  "production_creation_signature": "5vpCcoBpSyccs8m1T6VLxqKX3fgpuxBMYHJMVK7gXqdAfL5BF1tkude4Z7Ab5APXC41qvBLqbyWe8dQVdL4GoPPy",
+  "production_pool": {
+    "dex": "Raydium CPMM",
+    "amm_id": "2nh2EDFFabWaYJi2eHzLmwqA3cwSQnjn364jkeW3Nqnj",
+    "creation_signature": "2nuDGadAj6yBvYuofWeoEZU6gJQvWpu5ZK7VcauNN1ZpahpBunqZV5J2NBHpq7QYdZYSSzZexYXna8kCdzEiHKES",
+    "base_mint": "So11111111111111111111111111111111111111112",
+    "quote_mint": "6LTbeJQUvvHM4bXmVJFuvNxzUmL4pNQCnyoBqFDyQP89",
+    "initial_base_amount_sol": "0.1",
+    "initial_quote_amount_feliz": "100000",
+    "fee_tier": "0.25%",
+    "status": "finalized"
+  },
+  "production_wallet_public_address": "AbwNG64isqgUggWo99qivQPhFnCymVNkRjYFCEZewXa4",
+  "founder_allocation": {
+    "percent": 15,
+    "sale_schedule": "max_10_percent_of_reserve_first_12_months_then_linear_90_percent_over_24_months",
+    "lockup": "90_percent_12_month_cliff"
+  },
+  "public_allocation": null,
+  "liquidity_budget": null,
+  "launch_country": "GB",
+  "residence_country": "GB",
+  "total_budget_gbp": 500,
+  "exchange_balance_gbp_reported": 15,
+  "issuance_preference": "Oferta de produção de 25000000; emissão inicial única e remoção da autoridade de emissão propostas para o token",
+  "exchange_reported_by_user": "Binance UK",
+  "wallet_type_confirmed": true,
+  "wallet_type": "self_custody_phantom_solana",
+  "wallet_public_address": "82v4YBycZv6B8yjPrPcd8jq7bpXJ8a3Qi5XRoAwdnABS",
+  "mint_address": null,
+  "notes": [
+    "Oferta de 21 milhões e reserva de 25% aceitas como especificação; símbolo e rede de produção pendentes.",
+    "O token de teste não terá valor real nem mineração.",
+    "Nome e símbolo FELIZ foram testados localmente com Metaplex; a criação na devnet inclui metadados antes de revogar a emissão.",
+    "URI pública e imagem ainda pendentes. Metadados de teste editáveis; quantidade total não pode aumentar após a criação.",
+    "Carteiras exclusivas de teste foram criadas localmente; o token foi criado e verificado na devnet com SOL fictício.",
+    "Nenhuma venda, pool de liquidez ou operação com dinheiro real foi executada."
+  ],
+  "artwork": {
+    "local_path": "assets/felizcoin.jpeg",
+    "status": "published_on_netlify",
+    "public_url": "https://delicate-kringle-99b7e9.netlify.app/felizcoin.jpeg"
+  },
+  "devnet_mint_address": "JDHwqnG8gGd5J85Ze9AHxNvs1UBa7SbaNq1hjhfbCeaJ"
+}

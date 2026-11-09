@@ -1,0 +1,13 @@
+__pycache__/
+.env
+.env.*
+*-keypair.json
+TEST_KEYPAIR.json
+wallets/
+node_modules/
+.pnpm-store/
+.devnet/
+.localnet/
+.programs/
+.mainnet-pending/
+*.zip
